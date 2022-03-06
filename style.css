@@ -171,13 +171,14 @@ li a:hover {
 /* the second main div */
 
 .background {
-  background-image: url(images/laptop.jpeg);
-  /* width: 100vw; */
-  /* height: 100vh; */
+  background-image: url(images/gold9.jpg);
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -1;
 }
 
 .color {
