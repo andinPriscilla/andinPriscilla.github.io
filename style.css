@@ -12,7 +12,7 @@
   --ff-secondary: "Source Sans Pro", sans-serif;
 
   --main-color: rgb(167, 167, 167);
-  --nav-h: rgb(160, 146, 111);
+  --nav-h: rgb(107, 85, 30);
   /* font-sizes */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -69,27 +69,88 @@ p {
   }
 }
 .nav {
+ /* min-height: 20px; */
   display: flex;
   justify-content: space-between;
+ align-items: center;
+ padding-top: 0 24px;
+ margin-right: 50px;
 }
 ul {
   display: flex;
-  padding: 0.25rem;
   list-style: none;
+  justify-content:space-between;
+ align-items: center;
   text-transform: capitalize;
+  gap:60px;
+  
 }
-li {
-  margin: 1rem;
+.list {
+
+  transition: 0.7s ease;
   color: var(--nav-h);
 }
 a{
   text-decoration: none;
 }
 
-li a:hover {
+.list a:hover {
   color: black;
-  box-shadow: 10px -10px black;
+  box-shadow:  5px 5px rgb(75, 73, 73);
 }
+
+.harmburger{
+  display: none;
+  cursor:pointer;
+ 
+}
+.bar{
+  display:block;
+  width:25px;
+  height:3px;
+  margin:5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color:var(--nav-h);
+}
+
+@media(max-width:768px){
+  .harmburger{
+    display: block;
+  }
+  .harmburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .harmburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotateY(45deg);
+  }
+
+.harmburger.active .bar:nth-child(3){
+  transform: translateY(-8px) rotateY(-45deg);
+}
+ .nav-menu {
+   position: fixed;
+   left: -100%;
+   gap: 5px; 
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
+   transition: 0.3s;
+   background-color: black; 
+   
+ }
+
+
+
+  
+}
+ .list{
+  text-align: left;
+ }
+ .nav-menu.active{
+   left:0;
+ }
+
 
 
 /* the first main div */
@@ -300,6 +361,7 @@ li a:hover {
 }
 .third-p {
   max-width: 50%;
+  padding-left: 1rem;
 }
 .third-img {
   position: absolute;
@@ -310,6 +372,19 @@ li a:hover {
   width: 35%
   
 }
+
+@media (max-width: 750px){
+.third-img{
+  display: none
+}
+.third-p{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
+
+}
+}
+
 
 /* the fourth section */
 
@@ -345,8 +420,20 @@ li a:hover {
 .images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 10px;
+  grid-auto-rows: 100px;
 }
+@media (max-width: 430px){
+  .images{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap:10px;
+  }
+}
+
+
 /* contact page */
 h2{
   text-align: center;
