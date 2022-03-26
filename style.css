@@ -53,7 +53,7 @@ p {
 
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 960px; 
 }
 
 
@@ -73,22 +73,26 @@ p {
   display: flex;
   justify-content: space-between;
  align-items: center;
- padding-top: 0 24px;
  margin-right: 50px;
 }
+
+.nav-menu{
+gap:30px;
+}
+
 ul {
   display: flex;
   list-style: none;
   justify-content:space-between;
  align-items: center;
   text-transform: capitalize;
-  gap:60px;
+  gap:1rem;
   
 }
 .list {
-
+  font-size:25px;
   transition: 0.7s ease;
-  color: var(--nav-h);
+  color:var(--nav-h)
 }
 a{
   text-decoration: none;
@@ -136,7 +140,8 @@ a{
    width: 100%;
    text-align: center;
    transition: 0.3s;
-   background-color: black; 
+   background-color: black;
+   padding-top: 2rem; 
    
  }
 
@@ -156,7 +161,7 @@ a{
 /* the first main div */
 
 .intro {
-  position: relative;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,7 +189,8 @@ a{
 
 .intro p {
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
+  margin-top: 1rem;
 }
 .imgtop1,
 .imgtop2 {
@@ -206,6 +212,7 @@ a{
   top: 118px;
 }
 .img1 {
+  margin-top:2rem;
   border-radius: 100%;
   box-shadow: var(--bs);
 
@@ -337,13 +344,14 @@ a{
 
 .third-p {
   padding-top: 0.75em;
+  max-width: 50%;
+  padding-left: 1rem;
 }
 .myself {
   padding-top: 2em;
   padding-bottom: 0.75em;
 }
 .myself1 {
-  border: 1px solid black;
   background-color: var(--nav-h);
   font-family: var(--ff-secondary);
   font-size: 22px;
@@ -354,20 +362,16 @@ a{
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-bottom: 9em;
+  margin-bottom: 9rem;
 }
 .myself1 {
   flex-grow: 1;
 }
-.third-p {
-  max-width: 50%;
-  padding-left: 1rem;
-}
+
 .third-img {
   position: absolute;
   top: -80px;
   right: 50px;
-  border: 2px solid black;
   border-radius: 50px;
   width: 35%
   
@@ -377,12 +381,11 @@ a{
 .third-img{
   display: none
 }
-.third-p{
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 5rem;
+.third-p {
+ max-width: 100%;
 
 }
+
 }
 
 
@@ -402,6 +405,7 @@ a{
 }
 .galary {
   background: rgba(0, 0, 0, 0.9);
+  margin-bottom: 2rem;
 }
 
 .imglast {
@@ -409,6 +413,7 @@ a{
   width: 200px;
   height: 120px;
   object-fit: cover;
+ 
 
   max-width: 100%;
 }
@@ -420,8 +425,9 @@ a{
 .images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  grid-auto-rows: 100px;
+  row-gap: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
 }
 @media (max-width: 430px){
   .images{
@@ -437,32 +443,60 @@ a{
 /* contact page */
 h2{
   text-align: center;
+  padding-top:2rem;
+  padding-bottom:2rem;
 } 
 .form{
   display: grid;
-  margin:1rem 25%;
+  gap:10px;
+  justify-content:column;
+  align-items:center;
+
+  
+ 
 }
 .form input{
-  padding: 1em;
+  padding: 1em; 
+  border-radius: 16px;
+  margin:0 2rem;
 }
 .form input:focus{
   background: var(--nav-h);
 }
 .form label{
-  display: block;
-  margin: 0.25rem 0;
+  display:inline-block;
+  margin: 0 auto;
   font-size: 20px;
 }
 .submit{
 display: block;
 margin-top: 5px;
+margin: 0 ;
 background-color: var(--nav-h);
 
 }
 .contact{
   background:rgba(0, 0, 0, 0.9);
   color: wheat;
-  margin:1rem 25%;
+  margin:1rem 20%;
+}
+.textArea{
+  border-radius: 10px;
+  margin:0 2rem;
+  
+}
+
+@media(max-width:568px){
+  .form input{
+    padding: 1em; 
+    border-radius: 16px;
+    margin:0 auto;
+}
+.textArea{
+  border-radius: 10px;
+  margin:0 auto;
+  
+}
 }
 
 /* the footer */
@@ -474,16 +508,20 @@ footer {
   color: var(--nav-h);
   background-color: black;
 }
+footer h3{
+  margin-top:1rem;
+}
 .social-links {
+  margin-top:1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.list {
+.list-social {
   text-align: center;
   font-size: 1.8rem;
 }
-.list a {
+.list-social a {
   color: var(--nav-h);
 
 }
