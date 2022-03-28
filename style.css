@@ -145,6 +145,9 @@ a{
    padding-top: 2rem; 
    
  }
+ .logo{
+   margin-left:1rem;
+ }
 
 
 
@@ -315,7 +318,9 @@ a{
 }
 .language > p{
   border:3px solid rgb(136, 117, 68);
-  border-radius:10px;
+  border-radius:8px;
+  padding:1rem;
+  background-color:  rgb(136, 117, 68);
   
   
 }
