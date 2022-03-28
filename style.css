@@ -296,14 +296,29 @@ a{
   width: 10em;
   text-align: center;
   margin: 1em;
-  border: 5px var(--nav-h) solid;
+  border: 3px var(--nav-h) solid;
+
 }
 .labels {
   display: flex;
   justify-content: center;
   color: var(--nav-h);
 }
+.labels:hover{
+  color: rgb(136, 117, 68);
+}
+.button1 label:hover{
+  box-shadow: 10px -5px  rgb(136, 117, 68);
+  border-radius:10px;
+  
 
+}
+.language > p{
+  border:3px solid rgb(136, 117, 68);
+  border-radius:10px;
+  
+  
+}
 .button1 input {
   display: none;
 }
@@ -333,6 +348,7 @@ a{
     font-size: 20px;
   }
   }
+  
 /* this is my third section */
 
 .third {
