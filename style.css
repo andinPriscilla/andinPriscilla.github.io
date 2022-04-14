@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  
   /* custom properties */
 }
+
+
 
 :root {
   /* font-family */
@@ -14,8 +18,8 @@
   --main-color: rgb(167, 167, 167);
   --nav-h: rgb(107, 85, 30);
   /* font-sizes */
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
   --fs-h3: 1.25rem;
   /* box-shadow */
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
@@ -36,14 +40,18 @@ h3 {
 
 h1 {
   font-size: var(--fs-h1);
+  font-family: 'PT Mono', monospace;
 }
 
 h2 {
   font-size: var(--fs-h2);
-}
+  font-size: 30px;
+  font-family: 'PT Mono', monospace;
+  }
 
 h3 {
   font-size: var(--fs-h3);
+  font-family: 'Oswald', sans-serif;
 }
 
 p {
@@ -53,7 +61,7 @@ p {
 
 .container {
   margin: 0 auto;
-  max-width: 960px; 
+  /* max-width: 960px;  */
 }
 
 
@@ -70,11 +78,16 @@ p {
   }
 }
 .nav {
- /* min-height: 20px; */
+  position:sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
  align-items: center;
- margin-right: 50px;
+  padding-right: 70px; 
+  background-color: rgb(20, 12, 12);
+
+ 
+
 }
 
 .nav-menu{
@@ -93,15 +106,17 @@ ul {
 .list {
   font-size:25px;
   transition: 0.7s ease;
-  color:var(--nav-h)
+  
 }
 a{
   text-decoration: none;
+    
+color: rgba(195, 152, 71, 0.931);
 }
 
 .list a:hover {
-  color: black;
-  box-shadow:  5px 5px rgb(75, 73, 73);
+    color: rgb(182, 173, 173);
+  box-shadow:  3px 3px rgb(82, 73, 73);
 }
 
 .harmburger{
@@ -165,12 +180,13 @@ a{
 /* the first main div */
 
 .intro {
-  
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 2em;
+  max-width:980px;
 }
 .intro > div {
   width: 100%;
@@ -196,11 +212,18 @@ a{
   font-size: 20px;
   margin-top: 1rem;
 }
+.tittle{
+  background: linear-gradient(to left,
+  black,
+  var(--nav-h),
+  black);
+-webkit-background-clip: text;
+color: transparent;
+}
 .imgtop1,
 .imgtop2 {
   display: none;
-  background-color: var(--nav-h);
-  color: black;
+  color:whitesmoke;
   padding: 0.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -208,8 +231,11 @@ a{
   border-radius: 16px;
 }
 .imgtop1 {
-  right: -30px;
-  bottom: 169px;
+  right: -50px;
+  bottom: 109px;
+  font-style: italic;
+  background-color:  rgb(78, 57, 9);
+
 }
 .imgtop2 {
   right: -60px;
@@ -228,6 +254,14 @@ a{
 .front {
   font-family: var(--ff-secondary);
 }
+@media (max-width: 608px) {
+.tittle {
+  /* inline-size: 150px; */
+  overflow-wrap: break-word;
+ 
+  }
+}
+
 @media (min-width: 480px) {
   .imgtop1,
   .imgtop2 {
@@ -252,6 +286,9 @@ a{
   background-position: center;
   z-index: -1;
 }
+.second{
+  max-width:980px;
+}
 
 .color {
   background-color: rgba(0, 0, 0, 0.9);
@@ -272,13 +309,15 @@ a{
 .secondintro {
   position: relative;
 }
+.secondtop{
+  margin: 0 auto;
+  padding: 0 3rem;
+}
 .secondtop p {
   margin-top: 0.75em;
 }
 .mywork {
   text-align: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
   color: var(--nav-h);
 }
 
@@ -463,6 +502,14 @@ a{
 
 
 /* contact page */
+.contact{
+  background:rgba(0, 0, 0, 0.9);
+  color: wheat;
+  /* margin:1rem 20%; */
+  max-width:500px;
+  margin:2rem auto;
+
+}
 h2{
   text-align: center;
   padding-top:2rem;
@@ -470,7 +517,7 @@ h2{
 } 
 .form{
   display: grid;
-  gap:10px;
+  gap:5px;
   justify-content:column;
   align-items:center;
 
@@ -487,21 +534,18 @@ h2{
 }
 .form label{
   display:inline-block;
-  margin: 0 auto;
+  margin-left:2.5rem;
   font-size: 20px;
 }
 .submit{
 display: block;
-margin-top: 5px;
-margin: 0 ;
+/* margin-top: 5px;
+/* margin: 0 ; */
+/* padding-bottom:80px; */
 background-color: var(--nav-h);
 
 }
-.contact{
-  background:rgba(0, 0, 0, 0.9);
-  color: wheat;
-  margin:1rem 20%;
-}
+
 .textArea{
   border-radius: 10px;
   margin:0 2rem;
@@ -519,16 +563,27 @@ background-color: var(--nav-h);
   margin:0 auto;
   
 }
+.form label{
+  display:inline-block;
+  margin:0 auto;
+  font-size: 20px;
+}
+.submit{
+  max-width: 100%;
+}
 }
 
 /* the footer */
 footer {
-  padding-top: 3rem;
+  position:sticky;
+  bottom: 0;
+  padding-top: 2rem;
   background-color: b;
   text-align: center;
-  height: 15rem;
+  width: 100%;
+  height: 10rem;
   color: var(--nav-h);
-  background-color: black;
+  background-color: rgb(20, 12, 12);
 }
 footer h3{
   margin-top:1rem;
